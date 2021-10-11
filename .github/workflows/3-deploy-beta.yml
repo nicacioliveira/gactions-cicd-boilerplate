@@ -1,0 +1,15 @@
+name: "3 Beta deployment"
+
+on:
+  push:
+    branches:
+      - beta
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: beta
+    steps:
+      - name: Deploy
+        run: echo Deployment ok.
