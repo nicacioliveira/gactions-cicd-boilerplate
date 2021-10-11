@@ -12,6 +12,9 @@ jobs:
   run:
     name: "Draft a new release"
     runs-on: ubuntu-latest
+    environment:
+      name: ${{ github.event.inputs.environment }}
+      url: https://nicacioliveira-ga-${{ github.event.inputs.environment }}.herokuapp.com/health
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v2
