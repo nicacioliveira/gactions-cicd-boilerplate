@@ -3,8 +3,8 @@ name: "0 Force deployment"
 on:
   workflow_dispatch:
     inputs:
-      version:
-        description: "The version you want to release."
+      environment:
+        description: "Select environment to deploy"
         required: true
 
 jobs:
@@ -14,4 +14,6 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Show current branch
-        run: git rev-parse --abbrev-ref HEAD
+        run: |
+          git rev-parse --abbrev-ref HEAD
+          echo ${{ github.event.inputs.environment }}
