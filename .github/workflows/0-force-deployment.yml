@@ -4,7 +4,8 @@ on:
   workflow_dispatch:
     inputs:
       environment:
-        description: "Select environment to deploy"
+        description: "write environment to deploy"
+        default: beta
         required: true
 
 jobs:
@@ -13,7 +14,18 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Show current branch
-        run: |
-          git rev-parse --abbrev-ref HEAD
-          echo ${{ github.event.inputs.environment }}
+      - uses: actions/setup-node@v2
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - name: install dependencies
+        run: yarn --frozen-lockfile --silent
+      - name: build
+        run: yarn build
+
+      - name: heroku deploy
+        uses: akhileshns/heroku-deploy@v3.12.12
+        with:
+          heroku_api_key: ${{ secrets.HEROKU_API_KEY }}
+          heroku_app_name: nicacioliveira-ga-${{ github.event.inputs.environment }}.
+          heroku_email: ${{ secrets.HEROKU_EMAIL }}
