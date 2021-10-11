@@ -1,4 +1,4 @@
-name: "0 Force deployment"
+name: "_ Force deployment _"
 
 on:
   workflow_dispatch:
