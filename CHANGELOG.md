@@ -11,3 +11,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Nodejs Api
 - Jest tests
+- workflows for
+  - draft releases
+  - deploy and release tags
+  - test pull requests
+  - deploy on beta
+  - force deployment (not tested)
