@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: gactions-cicd-boilerplate
+spec:
+  replicas: 10
+  selector:
+    matchLabels:
+      app: gactions-cicd-boilerplate
+  template:
+    metadata:
+      labels:
+        app: gactions-cicd-boilerplate
+    spec:
+      containers:
+        - name: gactions-cicd-boilerplate
+          image: nicacioliveira/gactions-cicd-boilerplate
+          ports:
+            - containerPort: 8000
