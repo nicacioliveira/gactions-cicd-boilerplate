@@ -1,4 +1,4 @@
-import express, { json } from "express";
+import express, { json, IRoute } from "express";
 import http from "http";
 
 import { config as setupEnv } from "dotenv";
@@ -14,6 +14,8 @@ const configDependencies = () => {
 };
 
 const configRoutes = () => {
+  let routes = [];
+
   app.get("/health", (_req, res) => {
     res.sendStatus(200);
   });
@@ -22,11 +24,38 @@ const configRoutes = () => {
     res.send("pong").status(200);
   });
 
-  app.use("/who", (req, res) => {
+  app.get("/who", (req, res) => {
     res.json(req.headers);
   });
 
-  app.use("*", (_req, res) => res.sendStatus(400));
+  // subroute example
+
+  const subRouter = express();
+  app.get("/subRoute", subRouter);
+
+  subRouter.get("/health2", (_req, res) => {
+    res.sendStatus(200);
+  });
+
+  subRouter.use("*", (_req, res) => {
+    routes = app.routes;
+    res.json(getRoutes(subRouter._router.stack));
+  });
+
+  app.use("*", (_req, res) => {
+    routes = app.routes;
+    res.json(getRoutes(app._router.stack));
+  });
+};
+
+const getRoutes = (stack: any, routes: string[] = []) => {
+  stack.map((l) => {
+    const r: IRoute = l.route;
+    if (r?.path) {
+      routes.push(r.path);
+    }
+  });
+  return routes;
 };
 
 export async function init() {
