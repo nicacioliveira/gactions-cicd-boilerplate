@@ -11,7 +11,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Show relase tag name
-        run: echo ${{ github.event.release.tag_name }}
+        run: echo ${{ github.head_ref }}.${{ github.sha }}
       # - name: Set up QEMU
       #   uses: docker/setup-qemu-action@v1
 
