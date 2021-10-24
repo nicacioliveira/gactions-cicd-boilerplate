@@ -30,5 +30,4 @@ jobs:
           context: .
           file: ./Dockerfile
           push: true
-          plataforms: linux/amd64,linux
           tags: ${{ github.sha }}
