@@ -51,6 +51,6 @@ jobs:
         id: make-commit
         run: |
           git add .
-          git commit --message "k8s deployment container updated: nicacioliveira/gactions-cicd-boilerplate:${{ github.sha }}"
+          git commit --m "k8s deployment container updated: nicacioliveira/gactions-cicd-boilerplate:${{ github.sha }}"
       - name: Push changes
-        run: git push origin head
+        run: git push origin master
