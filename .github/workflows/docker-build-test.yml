@@ -41,7 +41,7 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
       - name: Change k8s container tag
-        run: node ./k8s/scripts/containertag.replacer.js nicacioliveira/gactions-cicd-boilerplate nicacioliveira/gactions-cicd-boilerplate:${{ github.sha }}
+        run: cd ./k8s/scripts && npm install && node ./containertag.replacer.js nicacioliveira/gactions-cicd-boilerplate nicacioliveira/gactions-cicd-boilerplate:${{ github.sha }}
       - name: Commit deployment manifest files
         id: make-commit
         run: |
