@@ -117,7 +117,7 @@ Artifacts
 
 ---
 
-# Schematics about up cases
+# Schematics
 
 In this schematics, you see a default flows of the exposed cases
 
