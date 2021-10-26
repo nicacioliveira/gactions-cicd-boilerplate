@@ -119,4 +119,6 @@ Artifacts
 
 # Schematics about up cases
 
+In this schematics, you see a default flows of the exposed cases
+
 ![](./GCI.drawio.svg)
