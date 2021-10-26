@@ -1,6 +1,6 @@
 # Something about CICD
 
-This repository is used for expose CICD examples with github actions and another tools. Maybe make senses for nodejsapi with GActions boilerplate.
+This repository is used for expose CICD examples with github actions and another tools. Maybe also make senses for nodejsapi with GActions boilerplate.
 
 ### Dependencies
 
