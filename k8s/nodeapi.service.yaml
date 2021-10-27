@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: gactions-cicd-boilerplate
+  labels:
+    service: gactions-cicd-boilerplate
+spec:
+  selector:
+    app: gactions-cicd-boilerplate
+  type: NodePort
+  ports:
+    - port: 8080
+      targetPort: 8080
