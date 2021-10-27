@@ -100,7 +100,7 @@ jobs:
 
   k8s-manifest-update:
     runs-on: ubuntu-latest
-    needs: docker
+    needs: container-registry-generate
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v2
