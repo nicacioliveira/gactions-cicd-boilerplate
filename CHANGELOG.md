@@ -7,6 +7,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+
+## [1.0.4] - 2021-10-27
+
 ## [1.0.3] - 2021-10-27
 
 ## [1.0.2] - 2021-10-22
@@ -43,7 +46,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 [1.0.1]: https://github.com/nicacioliveira/gactions-cicd-boilerplate/compare/1.0.0...1.0.1
 
-[Unreleased]: https://github.com/nicacioliveira/gactions-cicd-boilerplate/compare/1.0.3...HEAD
+[Unreleased]: https://github.com/nicacioliveira/gactions-cicd-boilerplate/compare/1.0.4...HEAD
+
+[1.0.4]: https://github.com/nicacioliveira/gactions-cicd-boilerplate/compare/1.0.2...1.0.4
 
 [1.0.3]: https://github.com/nicacioliveira/gactions-cicd-boilerplate/compare/1.0.2...1.0.3
 
