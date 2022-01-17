@@ -7,6 +7,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.0.5] - 2022-01-17
+
+-   New route in expressjs /alyson
 
 ## [1.0.4] - 2021-10-27
 
@@ -46,10 +49,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 [1.0.1]: https://github.com/nicacioliveira/gactions-cicd-boilerplate/compare/1.0.0...1.0.1
 
-[Unreleased]: https://github.com/nicacioliveira/gactions-cicd-boilerplate/compare/1.0.4...HEAD
+[unreleased]: https://github.com/nicacioliveira/gactions-cicd-boilerplate/compare/1.0.4...HEAD
 
 [1.0.4]: https://github.com/nicacioliveira/gactions-cicd-boilerplate/compare/1.0.2...1.0.4
 
 [1.0.3]: https://github.com/nicacioliveira/gactions-cicd-boilerplate/compare/1.0.2...1.0.3
 
 [1.0.2]: https://github.com/nicacioliveira/gactions-cicd-boilerplate/compare/1.0.1...1.0.2
+
+[Unreleased]: https://github.com/nicacioliveira/gactions-cicd-boilerplate/compare/1.0.5...HEAD
+
+[1.0.5]: https://github.com/nicacioliveira/gactions-cicd-boilerplate/compare/1.0.4...1.0.5

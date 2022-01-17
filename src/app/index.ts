@@ -28,6 +28,10 @@ const configRoutes = () => {
     res.json(req.headers);
   });
 
+  app.get("/alyson", (req, res) => {
+    res.json(req.headers);
+  });
+
   // subroute example
 
   const subRouter = express();
