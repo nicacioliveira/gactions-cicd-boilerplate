@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: "gactions-cicd-boilerplate"
-          image: "nicacioliveira/gactions-cicd-boilerplate:801e9944162028938902f11ec125075c9f23a4d5"
+          image: "nicacioliveira/gactions-cicd-boilerplate:bb51b8fafc96761414b0e1e89459302f2a16f3dc"
           ports:
             - containerPort: 8080
           env:
